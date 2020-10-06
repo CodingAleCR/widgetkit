@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
 
 class PasswordTextField extends StatefulWidget {
+  final Key key;
   final TextEditingController controller;
   final InputDecoration decoration;
   final Function(String) validator;
   final bool enabled;
   final AutovalidateMode autovalidateMode;
   final bool autocorrect;
+  final void Function(String) onChanged;
 
   PasswordTextField({
+    this.key,
     this.controller,
     this.enabled,
     this.validator,
     this.autovalidateMode,
     this.autocorrect = true,
     this.decoration,
+    this.onChanged,
   });
 
   @override
@@ -39,6 +43,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      key: widget.key,
       controller: widget.controller,
       obscureText: _passwordHidden,
       validator: widget.validator,
@@ -46,6 +51,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
       autocorrect: widget.autocorrect,
       enabled: widget.enabled,
       decoration: _buildDecoration(),
+      onChanged: widget.onChanged,
     );
   }
 
