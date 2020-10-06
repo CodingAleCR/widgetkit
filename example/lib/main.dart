@@ -42,9 +42,9 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: const EdgeInsets.all(8.0),
           child: ListView(
             children: [
-              PasswordFormField(),
+              PasswordTextField(),
               SizedBox(height: 16),
-              PasswordFormField(
+              PasswordTextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                 ),
