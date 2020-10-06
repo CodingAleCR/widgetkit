@@ -1,15 +1,21 @@
-# widgetkit
+# WidgetKit
 
-A new Flutter package project.
+A kit of widgets that are (almost) always needed in the different apps.
 
-## Getting Started
+## List of widgets
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+- Shared: Widgets that can be used globally, regardless of which app you are based off(Material or Cupertino).
+- Material: Widgets for MaterialApp based apps or for the Material look and feel.
+- (WIP)Cupertino: Widgets for CupertinoApp based apps or for the Cupertino(iOS) look and feel.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
-# widgetkit
+### Shared
+
+#### HideKeyboardOnTouchOutside
+
+A widget that you can use to wrap other widgets (like a Scaffold or a Form) that usually contain inputs, this will help hide the keyboard when touching outside.
+
+### Material
+
+#### Password TextField
+
+A widget that allows you to show or hide the password already embedded.
