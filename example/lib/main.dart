@@ -7,16 +7,15 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Widgetkit Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blueGrey,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Widgetkit Demo'),
     );
   }
 }
@@ -42,6 +41,11 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: const EdgeInsets.all(8.0),
           child: ListView(
             children: [
+              Text(
+                "PasswordTextField",
+                style: Theme.of(context).textTheme.headline6,
+              ),
+              SizedBox(height: 16),
               PasswordTextField(),
               SizedBox(height: 16),
               PasswordTextField(
@@ -49,10 +53,64 @@ class _MyHomePageState extends State<MyHomePage> {
                   border: OutlineInputBorder(),
                 ),
               ),
+              SizedBox(height: 32),
+              Text(
+                "CupertinoPasswordTextField",
+                style: Theme.of(context).textTheme.headline6,
+              ),
               SizedBox(height: 16),
               CupertinoTextField(
                 obscureText: true,
-                suffix: Icon(CupertinoIcons.eye),
+                suffix: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                  child: Icon(CupertinoIcons.eye),
+                ),
+              ),
+              SizedBox(height: 32),
+              Text(
+                "AutolinkText",
+                style: Theme.of(context).textTheme.headline6,
+              ),
+              SizedBox(height: 16),
+              AutolinkText(
+                "Hello world from https://www.flutter.dev/",
+                textStyle: TextStyle(color: Colors.black),
+                linkStyle: TextStyle(
+                  color: Colors.blue,
+                  decoration: TextDecoration.underline,
+                ),
+                onWebLinkTap: (String url) => print(url),
+              ),
+              SizedBox(height: 16),
+              AutolinkText(
+                "Humanized (removes scheme) https://www.flutter.dev/",
+                humanize: true,
+                textStyle: TextStyle(color: Colors.black),
+                linkStyle: TextStyle(
+                  color: Colors.blue,
+                  decoration: TextDecoration.underline,
+                ),
+                onWebLinkTap: (String url) => print(url),
+              ),
+              SizedBox(height: 16),
+              AutolinkText(
+                "Autolink email me@codingale.dev",
+                textStyle: TextStyle(color: Colors.black),
+                linkStyle: TextStyle(
+                  color: Colors.green,
+                  decoration: TextDecoration.underline,
+                ),
+                onEmailTap: (String url) => print(url),
+              ),
+              SizedBox(height: 16),
+              AutolinkText(
+                "Autolink phone +50688884444",
+                textStyle: TextStyle(color: Colors.black),
+                linkStyle: TextStyle(
+                  color: Colors.orange,
+                  decoration: TextDecoration.underline,
+                ),
+                onPhoneTap: (String url) => print(url),
               ),
             ],
           ),

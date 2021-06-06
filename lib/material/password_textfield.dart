@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class PasswordTextField extends StatefulWidget {
-  final Key key;
-  final TextEditingController controller;
-  final InputDecoration decoration;
-  final Function(String) validator;
-  final bool enabled;
-  final AutovalidateMode autovalidateMode;
+  final Key? key;
+  final TextEditingController? controller;
+  final InputDecoration? decoration;
+  final String? Function(String?)? validator;
+  final bool? enabled;
+  final AutovalidateMode? autovalidateMode;
   final bool autocorrect;
-  final void Function(String) onChanged;
+  final void Function(String)? onChanged;
 
   PasswordTextField({
     this.key,
@@ -26,7 +26,7 @@ class PasswordTextField extends StatefulWidget {
 }
 
 class _PasswordTextFieldState extends State<PasswordTextField> {
-  bool _passwordHidden;
+  late bool _passwordHidden;
 
   @override
   void initState() {
@@ -67,7 +67,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
         ),
       );
     } else {
-      decoration = widget.decoration.copyWith(
+      decoration = widget.decoration!.copyWith(
         suffixIcon: IconButton(
           icon: Icon(
             _passwordHidden ? Icons.visibility : Icons.visibility_off,

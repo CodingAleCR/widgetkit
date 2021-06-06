@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class HideKeyboardOnTouchOutside extends StatelessWidget {
   final Widget child;
 
-  HideKeyboardOnTouchOutside({@required this.child});
+  HideKeyboardOnTouchOutside({required this.child});
 
   @override
   Widget build(BuildContext context) {
