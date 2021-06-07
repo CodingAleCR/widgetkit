@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -30,6 +30,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  List<String> selectedChipsMultiple = [];
+  late String selectedChip;
+
   @override
   Widget build(BuildContext context) {
     return HideKeyboardOnTouchOutside(
@@ -51,19 +54,6 @@ class _MyHomePageState extends State<MyHomePage> {
               PasswordTextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                ),
-              ),
-              SizedBox(height: 32),
-              Text(
-                "CupertinoPasswordTextField",
-                style: Theme.of(context).textTheme.headline6,
-              ),
-              SizedBox(height: 16),
-              CupertinoTextField(
-                obscureText: true,
-                suffix: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8),
-                  child: Icon(CupertinoIcons.eye),
                 ),
               ),
               SizedBox(height: 32),
@@ -111,6 +101,51 @@ class _MyHomePageState extends State<MyHomePage> {
                   decoration: TextDecoration.underline,
                 ),
                 onPhoneTap: (String url) => print(url),
+              ),
+              SizedBox(height: 32),
+              Text(
+                "ChipSelection",
+                style: Theme.of(context).textTheme.headline6,
+              ),
+              SizedBox(height: 16),
+              Text(
+                "Multiple Selection",
+                style: Theme.of(context).textTheme.subtitle1,
+              ),
+              ChipSelection<String>.multiple(
+                wrapped: true,
+                alignment: WrapAlignment.center,
+                value: selectedChipsMultiple,
+                onChanged: (selected) {
+                  setState(() {
+                    selectedChipsMultiple = selected;
+                  });
+                },
+                choiceItems: ChipSelectionData.listFrom<String, String>(
+                  source: ["Hello", "Multiple", "Chip", "Selection"],
+                  value: (i, v) => v,
+                  label: (i, v) => v,
+                ),
+              ),
+              SizedBox(height: 16),
+              Text(
+                "Single Selection",
+                style: Theme.of(context).textTheme.subtitle1,
+              ),
+              ChipSelection<String>.single(
+                wrapped: true,
+                alignment: WrapAlignment.center,
+                value: selectedChip,
+                onChanged: (selected) {
+                  setState(() {
+                    selectedChip = selected;
+                  });
+                },
+                choiceItems: ChipSelectionData.listFrom<String, String>(
+                  source: ["Hello", "Single", "Chip", "Selection"],
+                  value: (i, v) => v,
+                  label: (i, v) => v,
+                ),
               ),
             ],
           ),

@@ -1,4 +1,4 @@
 library widgetkit;
 
-export 'material/widgetkit.dart';
-export 'shared/widgetkit.dart';
+export 'material/material.dart';
+export 'shared/shared.dart';

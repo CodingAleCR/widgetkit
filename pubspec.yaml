@@ -1,11 +1,11 @@
 name: widgetkit
 description: A kit of widgets that are (almost) always needed in the different apps.
-version: 0.2.0
+version: 0.3.0
 author:
 homepage:
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: ">=2.12.0 <3.0.0"
   flutter: ">=1.17.0 <2.0.0"
 
 dependencies:

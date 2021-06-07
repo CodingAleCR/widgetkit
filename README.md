@@ -16,13 +16,17 @@ A widget that you can use to wrap other widgets (like a Scaffold or a Form) that
 
 #### AutolinkText
 
-A text widget, that turns URLs, email and phone numbers into clickable inline links in text for flutter. A null safe version of FogNature's [AutolinkText](https://github.com/FogNature/flutter_autolink_text).
+A text widget, that turns URLs, email and phone numbers into clickable inline links in text for flutter. For the moment, it's a null safe version of FogNature's [AutolinkText](https://github.com/FogNature/flutter_autolink_text).
 
 ### Material
 
-#### Password TextField
+#### PasswordTextField
 
 A widget that allows you to show or hide the password already embedded.
+
+#### ChipSelection
+
+A widget that provides an easy way to create a single or multiple selection chips. For the moment, it's a null safe version of davigmacode's [ChipsChoice](https://github.com/davigmacode/flutter_chips_choice)
 
 ### Cupertino
 
