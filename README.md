@@ -26,7 +26,7 @@ A widget that allows you to show or hide the password already embedded.
 
 #### ChipSelection
 
-A widget that provides an easy way to create a single or multiple selection chips. For the moment, it's a null safe version of davigmacode's [ChipsChoice](https://github.com/davigmacode/flutter_chips_choice)
+A widget that provides an easy way to create a single or multiple selection chips. For the moment, it's a null safe version of davigmacode's [ChipsChoice](https://github.com/davigmacode/flutter_chips_choice).
 
 ### Cupertino
 

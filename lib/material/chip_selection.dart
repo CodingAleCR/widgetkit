@@ -216,7 +216,7 @@ class ChipSelectionData<T> {
   final bool hidden;
 
   /// This prop is useful for choice builder
-  final dynamic? meta;
+  final dynamic meta;
 
   /// Individual choice unselected item style
   final ChipSelectionItemStyle? style;
@@ -296,7 +296,7 @@ class ChipSelectionData<T> {
     String? tooltip,
     bool? disabled,
     bool? hidden,
-    dynamic? meta,
+    dynamic meta,
     ChipSelectionItemStyle? style,
     ChipSelectionItemStyle? activeStyle,
     Function(bool selected)? select,

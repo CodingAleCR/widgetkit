@@ -31,7 +31,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   List<String> selectedChipsMultiple = [];
-  late String selectedChip;
+  String? selectedChip;
 
   @override
   Widget build(BuildContext context) {
@@ -132,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 "Single Selection",
                 style: Theme.of(context).textTheme.subtitle1,
               ),
-              ChipSelection<String>.single(
+              ChipSelection<String?>.single(
                 wrapped: true,
                 alignment: WrapAlignment.center,
                 value: selectedChip,
