@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:widgetkit/widgetkit.dart';
 
 void main() {
@@ -46,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Text(
                 "PasswordTextField",
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
               SizedBox(height: 16),
               PasswordTextField(),
@@ -59,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(height: 32),
               Text(
                 "AutolinkText",
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
               SizedBox(height: 16),
               AutolinkText(
@@ -105,12 +104,12 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(height: 32),
               Text(
                 "ChipSelection",
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
               SizedBox(height: 16),
               Text(
                 "Multiple Selection",
-                style: Theme.of(context).textTheme.subtitle1,
+                style: Theme.of(context).textTheme.titleMedium,
               ),
               ChipSelection<String>.multiple(
                 wrapped: true,
@@ -130,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(height: 16),
               Text(
                 "Single Selection",
-                style: Theme.of(context).textTheme.subtitle1,
+                style: Theme.of(context).textTheme.titleMedium,
               ),
               ChipSelection<String?>.single(
                 wrapped: true,

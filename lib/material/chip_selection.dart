@@ -952,7 +952,7 @@ class ChipSelectionSpinner extends StatelessWidget {
           child: CircularProgressIndicator(
             strokeWidth: thickness ?? ChipSelectionSpinner.defaultThickness,
             valueColor: AlwaysStoppedAnimation<Color>(
-                color ?? Theme.of(context).accentColor),
+                color ?? Theme.of(context).indicatorColor),
           ),
         ),
       ),
