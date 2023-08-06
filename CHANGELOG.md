@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.0
+
+
+- 📖&nbsp;&nbsp;Changed: Supports Flutter 3.0.0
+
 ## 0.3.1
 
 - ⚙️&nbsp;&nbsp;Fixed: initialization errors in `example`.
