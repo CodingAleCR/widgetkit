@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+- 📖&nbsp;&nbsp;Changed: Adds `translucent` behavior to `HideKeyboardOnTouchOutside` so tap events are propagated properly.
+
 ## 1.0.0
 
 - 📖&nbsp;&nbsp;Changed: Supports Flutter 3.22.0

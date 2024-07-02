@@ -8,6 +8,7 @@ class HideKeyboardOnTouchOutside extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      behavior: HitTestBehavior.translucent,
       onTap: () {
         FocusManager.instance.primaryFocus?.unfocus();
       },

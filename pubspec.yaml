@@ -1,7 +1,7 @@
 name: widgetkit
 description:
   A kit of widgets that are (almost) always needed in the different apps.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/CodingAleCR/widgetkit
 
 environment:
