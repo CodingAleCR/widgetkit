@@ -1,7 +1,11 @@
 # Changelog
 
-## 0.4.0
+## 1.0.0
 
+- 📖&nbsp;&nbsp;Changed: Supports Flutter 3.22.0
+- ❗️&nbsp;&nbsp;Changed: `shared` sublibrary is now `widgets` since it aligns best with Flutter's naming scheme.
+
+## 0.4.0
 
 - 📖&nbsp;&nbsp;Changed: Supports Flutter 3.0.0
 
