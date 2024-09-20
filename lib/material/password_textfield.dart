@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class PasswordTextField extends StatefulWidget {
   final Key? key;
   final TextEditingController? controller;
+  final String? initialValue;
   final InputDecoration? decoration;
   final String? Function(String?)? validator;
   final bool? enabled;
@@ -18,6 +19,7 @@ class PasswordTextField extends StatefulWidget {
     this.autovalidateMode,
     this.autocorrect = true,
     this.decoration,
+    this.initialValue,
     this.onChanged,
   });
 
@@ -51,6 +53,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
       autocorrect: widget.autocorrect,
       enabled: widget.enabled,
       decoration: _buildDecoration(),
+      initialValue: widget.initialValue,
       onChanged: widget.onChanged,
     );
   }

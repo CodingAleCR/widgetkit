@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2
+
+- 📖&nbsp;&nbsp;Changed: Adds `initialValue` behavior to `PasswordTextField` so you can use controlled and uncontrolled fields.
+
 ## 1.0.1
 
 - 📖&nbsp;&nbsp;Changed: Adds `translucent` behavior to `HideKeyboardOnTouchOutside` so tap events are propagated properly.
